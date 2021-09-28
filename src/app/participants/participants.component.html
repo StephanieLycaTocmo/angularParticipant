@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 class="text-white">{{title}}</h1>
+        <div class="ms-auto">
+            <button class="btn btn-success btn-sm m-1" (click)="filterGender('Female')">F</button>
+            <button class="btn btn-success btn-sm m-1" (click)="filterGender('Male')">M</button>
+            <button class="btn btn-success btn-sm m-1" (click)="showAll()">A</button>
+        </div>
+    </div>
+</nav>
+<div class="card-body">
+    <table class="table">
+        <tbody>
+          <tr *ngFor="let participant of display">
+              <td>{{participant.name}}</td>
+              <td class="text-center"><a href="#" class="btn btn-primary text-white btn-sm">{{participant.age}} years old</a></td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
